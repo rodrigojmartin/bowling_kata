@@ -21,16 +21,16 @@ public class BowlingGameTest {
 
     }
 
-    private void rollMany(int n, int pins) {
-        for (int i=0; i<n; i++) {
-            g.roll(pins);
-        }
-    }
-
     @Test
     public void testAllOnes() {
         rollMany(20, 1);
         assertEquals(20 ,g.score());
 
+    }
+
+    private void rollMany(int n, int pins) {
+        for (int i=0; i<n; i++) {
+            g.roll(pins);
+        }
     }
 }
