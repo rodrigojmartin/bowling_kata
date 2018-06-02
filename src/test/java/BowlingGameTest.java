@@ -39,15 +39,13 @@ public class BowlingGameTest {
 
     @Test
     public void testOneStrike() {
-        g.roll(10);
+        rollStrike();
         g.roll(3);
         g.roll(4);
         rollMany(16,0);
         assertEquals(24 ,g.score());
 
     }
-
-
 
     private void rollMany(int n, int pins) {
         for (int i=0; i<n; i++) {
@@ -59,4 +57,9 @@ public class BowlingGameTest {
         g.roll(5);
         g.roll(5);
     }
+
+    private void rollStrike() {
+        g.roll(10);
+    }
+
 }
